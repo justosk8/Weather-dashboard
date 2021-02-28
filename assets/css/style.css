@@ -1,0 +1,15 @@
+#mainContainer {
+   
+    border-bottom: solid 2px black;
+}
+
+h2 {
+    text-align: center;
+}
+
+#cityLookup {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
