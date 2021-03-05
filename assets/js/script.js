@@ -1,3 +1,5 @@
+
+let submit = document.querySelector("button");
 const api = {
   key: "59bf5c5c074ea67df6a177d56a2d3930",
   base: "https://api.openweathermap.org/data/2.5/"
@@ -7,11 +9,15 @@ const searchbox = document.querySelector(".search-box");
 searchbox.addEventListener("keypress", setQuery);
 
 function setQuery(event) {
-  if (event.keyCode ===13) {
+  
+ if (event.keyCode ===13) {
     getResults(searchbox.value);
     console.log(searchbox.value);
   }
+  
+ // submit.onclick = getResults(searchbox.value);
 }
+
 
 function getResults(query) {
   fetch(`${api.base}weather?q=${query}&units=imperial&APPID=${api.key}`)
